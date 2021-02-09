@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+    <!-- Los iconos tipo Solid de Fontawesome-->
+    <link rel="stylesheet" href="use.fontawesome.com/releases/v5.0.8/css/solid.css">
+    <script src="use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+	<!-- Bootstrap CSS -->
+	<link href="../static/css/bootstrap.css" rel="stylesheet"
+		th:href="@{/css/bootstrap.css}">
+		
+	<!-- Nuestro css-->
+    <link rel="stylesheet" type="text/css" href="static/css/index.css" th:href="@{/css/index.css}">
+		
+
+</head>
+<body>
+
+	<div class="row">
+		<div class="col">
+			<label>Colors:</label>
+			<ul th:each="color : ${colorPokemon}">
+				<li th:text="${color.name}"></li>
+			</ul>
+		</div>
+	</div>
+</body>
+
+</html>

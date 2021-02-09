@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+    <!-- Los iconos tipo Solid de Fontawesome-->
+    <link rel="stylesheet" href="use.fontawesome.com/releases/v5.0.8/css/solid.css">
+    <script src="use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+	<!-- Bootstrap CSS -->
+	<link href="../static/css/bootstrap.css" rel="stylesheet"
+		th:href="@{/css/bootstrap.css}">
+		
+	<!-- Nuestro css-->
+    <link rel="stylesheet" type="text/css" href="static/css/index.css" th:href="@{/css/index.css}">
+</head>
+<body>
+ <h2> Listado de Pokemon</h2>
+ 
+ <table>
+ <thead>
+ 	<tr>
+ 	<th>Nombre Pokemon</th>
+ 	 <th>Ruta detalle Pokemon</th>
+ 	  <th>Accion</th>
+ 	</tr>
+ </thead>
+ 
+   <th:block th:each="pokemon : ${pokemon}">
+      <tr>
+          <td th:text="${pokemon.name}">...</td>
+          
+          <td th:text="${pokemon.url}">... </td>
+         <td>
+     		 <a  th:href="@{listaPokemonVerMas/{urlDetalle} (urlDetalle=${pokemon.url})}" >Detalles</a>
+         </td> 
+       </tr>
+   </th:block>
+   
+   <a  th:href="@{/listaPokemonPaginacion/{offset = 2}}" >Siguiente</a>
+</table>
+				
+</body>
+
+</html>

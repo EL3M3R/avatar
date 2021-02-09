@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+    <!-- Los iconos tipo Solid de Fontawesome-->
+    <link rel="stylesheet" href="use.fontawesome.com/releases/v5.0.8/css/solid.css">
+    <script src="use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+	<!-- Bootstrap CSS -->
+	<link href="../static/css/bootstrap.css" rel="stylesheet"
+		th:href="@{/css/bootstrap.css}">
+		
+	<!-- Nuestro css-->
+    <link rel="stylesheet" type="text/css" href="static/css/index.css" th:href="@{/css/index.css}">
+		
+
+</head>
+<body>
+
+		<div class="row">
+			<div class="col-md-4">
+			
+			</div>
+			
+			<div class="col-md-4"> 
+			
+			<div class="card" style="width: 18rem;">
+				  <img class="card-img-top" src="https://media-exp1.licdn.com/dms/image/C5603AQFcCeN3YHWODQ/profile-displayphoto-shrink_400_400/0/1550624215073?e=1618444800&v=beta&t=6hQDNSF6Ff02HJzfF3EZuSsGMEPY64PFTCqZPnP0TwE" alt="Card image cap">
+				  <div class="card-body">
+				    <p class="card-text">Emerson Yllisca Vera</p>
+				    <a class="btn btn-success btn-block" th:href="@{/listaPokemon}" title="Empezar">
+				    	Empezar Listado
+				    </a>
+				  </div>
+				</div>
+
+
+			</div>
+			
+			
+			<div class="col-md-4"> </div>
+			
+		</div>
+</body>
+
+</html>
